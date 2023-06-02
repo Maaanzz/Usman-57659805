@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+//Creating 15 arrays named Student//
+for($x=0; $x<=15; $x++){
+${'Student'.$x} = array();
+}
+//for($x=0; $x<=15; $x++){//
+//${'StudentMarksSum'.$x} = array();//
+//}//
+
+
+//Adding associative elements in arrays//
+for($y=0; $y <= 15; $y++){
+for($x=0; $x <= 2; $x++){
+${"Student".$y} ['English'] = $x;
+${"Student".$y} ['Science'] = $x;
+${"Student".$y} ['Maths'] = $x;
+
+//array_push(${"Student".$y}, $x);//
+}
+}
+//echo sizeof($Student15);//
+
+for($y = 0; $y <= 15; $y++){
+${"Student".$y} ['English'] = rand(50, 150);
+${"Student".$y} ['Science'] = rand(50, 150);
+${"Student".$y} ['Maths'] = rand(50, 150);
+}
+
+for($y=0;$y<=15;$y++){
+$Sum=0;
+echo "Marks of student No. ".$y."<br>";
+foreach(${'Student'.$y} as $x => $x_value){
+$Sum=$x_value+$Sum;
+echo 'Subject = '.$x. ' ,Marks = '. $x_value;
+echo "<br>";
+}
+echo "Sum for all Subjects Marks =" .$Sum."<br>";
+echo "<br>";
+}
+$total_English=0;
+$Average_English=0;
+for($y=0; $y<=15; $y++){
+$total_English = ${"Student".$y}['English'] + $total_English;
+}
+$Average_English=$total_English/15;
+echo "Average English Marks of Whole class = " .$Average_English. "<br>";
+echo "<br>";
+
+$total_Science=0;
+$Average_Science=0;
+for($y=0; $y<=15; $y++){
+$total_Science = ${"Student".$y}['Science'] + $total_Science;
+}
+$Average_Science=$total_Science/15;
+echo "Average Science Marks of Whole class = " .$Average_Science. "<br>";
+echo "<br>";
+
+$total_Maths=0;
+$Average_Maths=0;
+for($y=0; $y<=15; $y++){
+$total_Maths = ${"Student".$y}['Maths'] + $total_Maths;
+}
+$Average_Maths=$total_Maths/15;
+echo "Average Maths Marks of Whole class = " .$Average_Maths. "<br>";
+echo "<br>";
+//echo ${'Student'.$y}['English'];//
+//echo "<br>";//
+//echo ${'Student'.$y}['Science'];//
+//echo "<br>";//
+//echo ${'Student'.$y}['Maths'];//
+//echo "<br>";//
+//echo $Student1['English'] ;//
+//echo $Student1[0] , $Student1[1] , $Student1[2];//
+?>
+
+</body>
+</html>
