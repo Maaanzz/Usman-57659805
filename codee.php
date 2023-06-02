@@ -13,7 +13,7 @@ ${'Student'.$x} = array();
 
 
 //Adding associative elements in arrays//
-for($y=0; $y <= 15; $y++){
+for($y=0; $y <= 13; $y++){
 for($x=0; $x <= 2; $x++){
 ${"Student".$y} ['English'] = $x;
 ${"Student".$y} ['Science'] = $x;
